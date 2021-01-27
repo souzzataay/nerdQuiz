@@ -7,8 +7,8 @@
     "theme": {
         "colors": {
             "primary":"#a62b00",
-            "secudary":"#007bb2",
-            "mainBg":"#00567c",
+            "secudary":"#7b325e",
+            "mainBg":"#ffa628",
             "contrastText":"#f7f6f4",
             "wrong": "#00e5ff",
             "success": "#76ff03"

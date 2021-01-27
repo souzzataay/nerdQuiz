@@ -41,7 +41,7 @@ const Widget = styled.div`
     justify-content: flex-start;
     align-items:center;
     padding: 18px 32px;
-    background-color: ${({theme}) => theme.colors.secundary};
+    background-color: ${({theme}) => theme.colors.primary};
     *{
       margin:0;
     }
