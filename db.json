@@ -1,0 +1,20 @@
+{
+    "bg": "https://wallpaperaccess.com/full/398479.jpg",
+    "title":"Nerd QUIZ",
+    "description": "Quiz nerd com Nerdisses",
+    "questions": [],
+    "external": [],
+    "theme": {
+        "colors": {
+            "primary":"#a62b00",
+            "secudary":"#007bb2",
+            "mainBg":"#00567c",
+            "contrastText":"#f7f6f4",
+            "wrong": "#00e5ff",
+            "success": "#76ff03"
+        },
+        "borderRadius":"4px"
+
+    }
+
+}
