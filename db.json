@@ -2,8 +2,71 @@
     "bg": "images/imageBG.png",
     "title":"Quiz Geek",
     "description": "Perguntas do mundo geek para você testar o seu nível de conhecimento nerd",
-    "questions": [],
-    "external": [],
+    "questions": [
+        {
+          "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
+          "title": "Qual a principal frase do Sheldon, do The Big Bang Theory?",
+          "description": "Pergunta fácil em!",
+          "answer": 4,
+          "alternatives": [
+            "Kamehameha",
+            "Alohomora",
+            "É hora de Morfar",
+            "Bazinga"
+            
+          ]
+        },
+        {
+          "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
+          "title": "Quem foi o responsável pelo comando de navegação da Frota Estelar em Star Trek?",
+          "description": "E agora? Você sabe?",
+          "answer": 1,
+          "alternatives": [
+            "Spok",
+            "Capitão James Kirk",
+            "Pavel Chekov",
+            "Uhura"
+          ]
+        },
+        {
+          "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+          "title": "Qual o nome da startup company fundada por Richard Hendricks, em Silicon Valley?",
+          "answer": 4,
+          "alternatives": [
+            "Enterprise",
+            "Pied Piper",
+            "Hooli",
+            "Apple"
+          ]
+        },
+        {
+          "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+          "title": " Qual desses é um vilão do Spider Man?",
+          "answer": 3,
+          "alternatives": [
+            "Magneto",
+            "Duas Caras",
+            "Duende Verde",
+            "Ultron"
+           
+
+          ]
+        },
+        {
+            "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+            "title": " Quem é o personagem que come espaguete com almôndegas em Dragon Ball?",
+            "answer": 2,
+            "alternatives": [
+              "Goku",
+              "Mr.Satan",
+              "Piccolo",
+              "Majun Boo"
+         
+              
+            ]
+          }
+      ],
+    "external": ["https://nerd-quiz.souzzataay.vercel.app/"],
     "theme": {
         "colors": {
             "primary":"#004608",
