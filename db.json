@@ -1,16 +1,16 @@
 {
-    "bg": "https://wallpaperaccess.com/full/398479.jpg",
-    "title":"Nerd QUIZ",
-    "description": "Quiz nerd com Nerdisses",
+    "bg": "https://i.pinimg.com/originals/ea/72/c9/ea72c997ded559ebb62f4a58c52e2ebd.png",
+    "title":"Quiz Geek",
+    "description": "Perguntas do mundo geek para você testar o seu nível de conhecimento nerd",
     "questions": [],
     "external": [],
     "theme": {
         "colors": {
-            "primary":"#a62b00",
+            "primary":"#004608",
             "secudary":"#7b325e",
-            "mainBg":"#ffa628",
+            "mainBg":"#277705fa",
             "contrastText":"#f7f6f4",
-            "wrong": "#00e5ff",
+            "wrong": "#046d10",
             "success": "#76ff03"
         },
         "borderRadius":"4px"
