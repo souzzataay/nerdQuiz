@@ -4,7 +4,7 @@
     "description": "Perguntas do mundo geek para você testar o seu nível de conhecimento nerd",
     "questions": [
         {
-          "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
+          "image": "images/Sheldon.jpeg",
           "title": "Qual a principal frase do Sheldon, do The Big Bang Theory?",
           "description": "Pergunta fácil em!",
           "answer": 4,
