@@ -8,6 +8,8 @@ import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -35,22 +37,18 @@ export default function Home() {
           <Widget.Content>
             <form onSubmit={function (infosEvento) {
               infosEvento.preventDefault();
-
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo');
             }}
             >
-              <input
-                onChange={function(infosEvento) {
-                // State
-                  setName(infosEvento.target.value);
-                }}
-                placeholder="Diz ai seu nome" 
+              <Input
+                name="nomeDoUsuário"
+                onChange={(infosEvento) => setName(infosEvento.target.value)}
+                placeholder="Diz ai seu nome"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>

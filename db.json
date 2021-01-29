@@ -1,5 +1,5 @@
 {
-    "bg": "https://i.pinimg.com/originals/ea/72/c9/ea72c997ded559ebb62f4a58c52e2ebd.png",
+    "bg": "images/imageBG.png",
     "title":"Quiz Geek",
     "description": "Perguntas do mundo geek para você testar o seu nível de conhecimento nerd",
     "questions": [],
@@ -9,12 +9,15 @@
             "primary":"#004608",
             "secudary":"#7b325e",
             "mainBg":"#277705fa",
-            "contrastText":"#f7f6f4",
+            "contrastText":"#00ff37",
             "wrong": "#046d10",
-            "success": "#76ff03"
+            "success": "#76ff03",
+            "inputBorder": "#34cc21",
+            "inputBg": "#469e20fa"
         },
         "borderRadius":"4px"
 
     }
+    
 
 }
