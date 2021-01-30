@@ -4,7 +4,7 @@
     "description": "Perguntas do mundo geek para você testar o seu nível de conhecimento nerd",
     "questions": [
         {
-          "image": "images/Sheldon.jpeg",
+          "image": "images/Sheldon.gif",
           "title": "Qual a principal frase do Sheldon, do The Big Bang Theory?",
           "description": "Pergunta fácil em!",
           "answer": 4,
@@ -17,7 +17,7 @@
           ]
         },
         {
-          "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
+          "image": "images/startrek.gif",
           "title": "Quem foi o responsável pelo comando de navegação da Frota Estelar em Star Trek?",
           "description": "E agora? Você sabe?",
           "answer": 1,
@@ -29,7 +29,7 @@
           ]
         },
         {
-          "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+          "image": "images/richard.gif",
           "title": "Qual o nome da startup company fundada por Richard Hendricks, em Silicon Valley?",
           "answer": 4,
           "alternatives": [
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+          "image": "images/spiderman.gif",
           "title": " Qual desses é um vilão do Spider Man?",
           "answer": 3,
           "alternatives": [
@@ -53,7 +53,7 @@
           ]
         },
         {
-            "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
+            "image": "images/dragonball.gif",
             "title": " Quem é o personagem que come espaguete com almôndegas em Dragon Ball?",
             "answer": 2,
             "alternatives": [
