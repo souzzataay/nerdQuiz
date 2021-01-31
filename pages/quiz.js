@@ -6,6 +6,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
+import AlternativForm from '../src/components/AlternativForm';
 
 function WidgetResult({results}){
   return(
@@ -90,7 +91,7 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit,addRes
       {question.description}
    
       </p>
-      <form onSubmit={(infosDoEvento) => {
+      <AlternativForm onSubmit={(infosDoEvento) => {
         infosDoEvento.preventDefault();
         setIsQuestionSelected(true);
         setTimeout(() => {
@@ -106,8 +107,13 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit,addRes
       >
       {question.alternatives.map((alternative,alternativeIndex) => {
         const alternativeId = `alternative_${alternativeIndex}`;
+        const alternativeStatus= isCorrect ? 'SUCCESS':'ERROR';
+        const isSelected = alternativeSelected === alternativeIndex;
           return (
-            <Widget.AltPerg as = "label" key={alternativeId} htmlFor={alternativeId}>
+            <Widget.AltPerg as = "label"
+            key={alternativeId} 
+            htmlFor={alternativeId} 
+            data-selected={true} data-status={isSelectedQuestion && alternativeStatus}>
               <input
                style={{ display:'none' }}
                id={alternativeId}
@@ -128,7 +134,7 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit,addRes
      
       {isSelectedQuestion && isCorrect && <p>Você acertou!</p>}
       {isSelectedQuestion && !isCorrect && <p>Você errou!</p>}
-      </form>
+      </AlternativForm>
     </Widget.Content>
     </Widget>
 

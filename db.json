@@ -20,12 +20,12 @@
           "image": "images/startrek.gif",
           "title": "Quem foi o responsável pelo comando de navegação da Frota Estelar em Star Trek?",
           "description": "E agora? Você sabe?",
-          "answer": 0,
+          "answer": 3,
           "alternatives": [
-            "Spok",
+            "Jack",
             "Capitão James Kirk",
             "Pavel Chekov",
-            "Uhura"
+            "Spok"
           ]
         },
         {
@@ -72,12 +72,12 @@
             "primary":"#004608",
             "secudary":"#7b325e",
             "mainBg":"#277705fa",
-            "contrastText":"#00ff37",
-            "wrong": "#046d10",
+            "contrastText":"#dcedc8",
+            "wrong": "#e65100",
             "success": "#76ff03",
             "inputBorder": "#34cc21",
             "inputBg": "#469e20fa"
-        },
+        },    
         "borderRadius":"4px"
 
     }
