@@ -123,7 +123,7 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit,addRes
       {JSON.stringify(question,null,4)}
       </pre> */}
 
-      <Button type="submit" disabled={!hasSelectedAlternative}>Confirmar</Button>
+      <Button type="submit" disabled={!hasSelectedAlternative}>Próximo</Button>
 
      
       {isSelectedQuestion && isCorrect && <p>Você acertou!</p>}
