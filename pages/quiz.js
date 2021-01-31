@@ -7,6 +7,43 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
 
+function WidgetResult({results}){
+  return(
+    <Widget>
+      <Widget.Header>
+        Resultado:
+      </Widget.Header>
+      <Widget.Content>
+        <p>Você Acertou {' '}
+          { results.reduce((somaAtual, resultAtual ) => {
+          const isAcertos = resultAtual === true;
+          if(isAcertos){
+            return somaAtual + 1;
+          } 
+            return somaAtual;
+        }, 0)} 
+        
+        {' '}
+
+        {/*  Alem do reduce pode-se usar o 
+              {result.filter(x) => x).length}
+              como o resultado é true e false, dessa forma ele 
+              seleciona os true e conta quantos tem
+              */}
+         Questões</p>
+        <ul>
+          {results.map((result, index) => (
+          <li key={`result__${result}`}>
+            #{'0'}{index +1}{' '}
+             Resultado: {result === true ? 'Acertou' : 'Errou'}
+          </li>
+          ))}
+          </ul>
+      </Widget.Content>
+    </Widget>
+  );
+}
+
 function LoadingWidget(){
   return(
     <Widget>
@@ -20,7 +57,7 @@ function LoadingWidget(){
   );
 }
 
-function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit}) {
+function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit,addResults,}) {
   
   const [alternativeSelected, setAlternativeSelected]= React.useState(undefined);
   const [isSelectedQuestion, setIsQuestionSelected] = React.useState(false);
@@ -57,10 +94,10 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit}) {
         infosDoEvento.preventDefault();
         setIsQuestionSelected(true);
         setTimeout(() => {
-          
+         addResults(isCorrect);
           onSubmit();
           setIsQuestionSelected(false);
-          setIsQuestionSelected(undefined);
+          setAlternativeSelected(undefined);
         },3 *1000);
         
 
@@ -106,12 +143,18 @@ const screenStates = {
 };
 export default function QuizPage() { 
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
+  const [results, setResults] = React.useState([]);
   const questionTotal = db.questions.length;
   const [currentQuestion,setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
 
-
+  function addResults(result){
+    setResults([
+      ...results,
+      result
+    ]);
+  }
   // [React Chama de : Efeitos || Effects ]
   // React.useEffect
   //    [nasce ==> didMount]
@@ -121,7 +164,7 @@ export default function QuizPage() {
   React.useEffect(() => {
     // fetch() ...
     setTimeout(() => {
-      setScreenState(screenStates.QUIZ);
+       setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
   // nasce === didMount
   }, []);
@@ -145,12 +188,13 @@ return (
             questionIndex={questionIndex}
             questionTotal={questionTotal}
             onSubmit={handleSubmitQuiz}
+            addResults={addResults}
 
           /> 
         )}
       {screenState === screenStates.LOADING && <LoadingWidget/>}
 
-      {screenState === screenStates.RESULT && <div>Você acertou X questões,parabéns!</div>}
+      {screenState === screenStates.RESULT && <WidgetResult results={results}/>}
     </QuizContainer>
 
   </QuizBackground>
