@@ -21,7 +21,12 @@ function LoadingWidget(){
 }
 
 function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit}) {
+  
+  const [alternativeSelected, setAlternativeSelected]= React.useState(undefined);
+  const [isSelectedQuestion, setIsQuestionSelected] = React.useState(false);
   const questionID = `question_${questionIndex}`;
+  const isCorrect = alternativeSelected === question.answer;
+  const hasSelectedAlternative = alternativeSelected !== undefined;
   return(
         <Widget>
         <Widget.Header>
@@ -48,20 +53,29 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit}) {
       {question.description}
    
       </p>
-      <form onSubmit={(infosDoEvento) =>{
+      <form onSubmit={(infosDoEvento) => {
         infosDoEvento.preventDefault();
-        onSubmit();
+        setIsQuestionSelected(true);
+        setTimeout(() => {
+          
+          onSubmit();
+          setIsQuestionSelected(false);
+          setIsQuestionSelected(undefined);
+        },3 *1000);
+        
+
 
       }}
       >
       {question.alternatives.map((alternative,alternativeIndex) => {
         const alternativeId = `alternative_${alternativeIndex}`;
           return (
-            <Widget.AltPerg as = "label" htmlFor={alternativeId}>
+            <Widget.AltPerg as = "label" key={alternativeId} htmlFor={alternativeId}>
               <input
                style={{ display:'none' }}
-               id= {alternativeId}
+               id={alternativeId}
                name={questionID}
+               onChange={() => setAlternativeSelected(alternativeIndex)}
                type="radio"
                />
                {alternative}
@@ -72,7 +86,11 @@ function WidgetQuestion ({question, questionTotal, questionIndex,onSubmit}) {
       {JSON.stringify(question,null,4)}
       </pre> */}
 
-      <Button type="submit">Confirmar</Button>
+      <Button type="submit" disabled={!hasSelectedAlternative}>Confirmar</Button>
+
+     
+      {isSelectedQuestion && isCorrect && <p>Você acertou!</p>}
+      {isSelectedQuestion && !isCorrect && <p>Você errou!</p>}
       </form>
     </Widget.Content>
     </Widget>

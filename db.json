@@ -7,7 +7,7 @@
           "image": "images/Sheldon.gif",
           "title": "Qual a principal frase do Sheldon, do The Big Bang Theory?",
           "description": "Pergunta fácil em!",
-          "answer": 4,
+          "answer": 3,
           "alternatives": [
             "Kamehameha",
             "Alohomora",
@@ -20,7 +20,7 @@
           "image": "images/startrek.gif",
           "title": "Quem foi o responsável pelo comando de navegação da Frota Estelar em Star Trek?",
           "description": "E agora? Você sabe?",
-          "answer": 1,
+          "answer": 0,
           "alternatives": [
             "Spok",
             "Capitão James Kirk",
@@ -31,7 +31,7 @@
         {
           "image": "images/richard.gif",
           "title": "Qual o nome da startup company fundada por Richard Hendricks, em Silicon Valley?",
-          "answer": 4,
+          "answer": 3,
           "alternatives": [
             "Enterprise",
             "Pied Piper",
@@ -42,7 +42,7 @@
         {
           "image": "images/spiderman.gif",
           "title": " Qual desses é um vilão do Spider Man?",
-          "answer": 3,
+          "answer": 2,
           "alternatives": [
             "Magneto",
             "Duas Caras",
@@ -55,7 +55,7 @@
         {
             "image": "images/dragonball.gif",
             "title": " Quem é o personagem que come espaguete com almôndegas em Dragon Ball?",
-            "answer": 2,
+            "answer": 1,
             "alternatives": [
               "Goku",
               "Mr.Satan",
